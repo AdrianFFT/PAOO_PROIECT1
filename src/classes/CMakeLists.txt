@@ -1,1 +1,1 @@
-add_library(classes myclass.cpp)
+add_library(classes class.cpp)
