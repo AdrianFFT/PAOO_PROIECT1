@@ -1,10 +1,6 @@
 #pragma once
 
 class Country {
-
-};#pragma once
-
-class Country {
 private:
     std::string name;
     int population;
@@ -34,5 +30,5 @@ public:
     void setArea(float newArea);
 
     //Calculate Country Density
-    float calculateCountryDensity(int population, float area);
+    float calculateDensity(int population, float area);
 };
