@@ -8,12 +8,12 @@ Country::Country(){
 };
 
 // Copy Constructor
-Country::Country(const Country& other) {
+Country::Country(const Country& prevCountry) {
     std::cout << "Copy Constructor called" << std::endl;
 };
 
 // Move Constructor
-Country::Country(Country&& other) {
+Country::Country(Country&& prevCountry) {
     std::cout << "Move Constructor called" << std::endl;
 };
 
