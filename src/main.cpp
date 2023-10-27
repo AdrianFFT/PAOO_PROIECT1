@@ -1,5 +1,5 @@
 # include <cstring>
-# include "myclass.hpp"
+# include "class.hpp"
 # include <iostream>
 
 # define MAX_LEN 5
