@@ -2,16 +2,16 @@
 
 class Country {
 private:
-    std::string name;
+    char* name;
     int population;
     float area;
 
 public:
     // Constructor
-    Country(std::string nume, int varsta, float area);
+    Country(char* name, int varsta, float area);
 
     // Destructor
-    Country();
+    ~Country();
 
     //Copy Constructor
     Country(const Country& prevCountry);
@@ -20,15 +20,15 @@ public:
     Country(Country&& prevCountry);
 
     //Getters
-    std::string getName();
+    char* getName();
     int getPopulation();
     float getArea();
 
     //Setters
-    void setName(std::string newName);
+    void setName(char* newName);
     void setPopulation(int newPopulation);
     void setArea(float newArea);
 
     //Calculate Country Density
-    float calculateDensity(int population, float area);
+    float calculateDensity();
 };
