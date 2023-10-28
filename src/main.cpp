@@ -26,8 +26,6 @@ int main() {
     Country anotherCountry("Another Country", 1000000, 50000);
     Country movedCountry = std::move(anotherCountry);
 
-    // Display the name of the second country
-    std::cout << "Name of the second country: " << anotherCountry.getName() << std::endl; // This should be an empty string, as we moved the resources
-
-    return 0;
+    // Display the name of the moved country
+    std::cout << "Name of the moved country: " << movedCountry.getName() << std::endl; // example that we moved the resources from anotherCountry to movedCountry
 }

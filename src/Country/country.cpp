@@ -8,7 +8,7 @@ Country::Country(char *name, int population, float area){
     strcpy(this->name, name);
     this->population=population;
     this->area=area;
-    std::cout << "Country: " << this->name << "was constructed." << std::endl;
+    std::cout << "Country: " << this->name << " was constructed." << std::endl;
 };
 
 // Copy Constructor
@@ -17,22 +17,26 @@ Country::Country(const Country& prevCountry) {
     strcpy(this->name, prevCountry.name);
     this->population=prevCountry.population;
     this->area=prevCountry.area;
-    std::cout << "Country: " << this->name << "was copied." << std::endl;
+    std::cout << "Country: " << this->name << " was copied." << std::endl;
 };
 
 // Move Constructor
 Country::Country(Country&& prevCountry) {
     this->name=prevCountry.name;
-    delete [] prevCountry.name;
+    prevCountry.name=NULL;
     this->population=prevCountry.population;
     this->area=prevCountry.area;
-    std::cout << "Country: " << this->name << "was moved." << std::endl;
+    std::cout << "Country: " << this->name << " was moved." << std::endl;
 };
 
 // Destructor
 Country::~Country() {
-    std::cout << "Country: " << this->name << "was destructed." << std::endl;
-    delete [] this->name;
+    if (this->name != NULL) {
+        std::cout << "Country: " << this->name << " was destructed." << std::endl;
+        delete[] this->name;
+    } else{
+        std::cout << "A country which lost its name" << " was destructed." << std::endl;
+    }
 };
 
 //Getters
