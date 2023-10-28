@@ -4,22 +4,35 @@
 
 // Constructor
 Country::Country(char *name, int population, float area){
-    std::cout << "Constructor called" << std::endl;
+    this->name = new char[strlen(name) + 1];
+    strcpy(this->name, name);
+    this->population=population;
+    this->area=area;
+    std::cout << "Country: " << this->name << "was constructed." << std::endl;
 };
 
 // Copy Constructor
 Country::Country(const Country& prevCountry) {
-    std::cout << "Copy Constructor called" << std::endl;
+    this->name = new char[strlen(prevCountry.name) + 1];
+    strcpy(this->name, prevCountry.name);
+    this->population=prevCountry.population;
+    this->area=prevCountry.area;
+    std::cout << "Country: " << this->name << "was copied." << std::endl;
 };
 
 // Move Constructor
 Country::Country(Country&& prevCountry) {
-    std::cout << "Move Constructor called" << std::endl;
+    this->name=prevCountry.name;
+    delete [] prevCountry.name;
+    this->population=prevCountry.population;
+    this->area=prevCountry.area;
+    std::cout << "Country: " << this->name << "was moved." << std::endl;
 };
 
 // Destructor
 Country::~Country() {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Country: " << this->name << "was destructed." << std::endl;
+    delete [] this->name;
 };
 
 //Getters
@@ -35,7 +48,7 @@ Country::~Country() {
 
     //Setters
     void Country::setName(char* newName){
-        delete[] this->name;
+        delete [] this->name;
         this->name = new char[strlen(newName) + 1];
         strcpy(this->name, newName);
     }
