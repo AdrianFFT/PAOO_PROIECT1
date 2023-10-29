@@ -7,16 +7,16 @@ private:
     float area;
 
 public:
-    // Constructor
+    // Constructor: Constructs an Country object
     Country(char* name, int varsta, float area);
 
-    // Destructor
+    // Destructor: frees up the dinamically allocated memory
     ~Country();
 
-    //Copy Constructor
+    //Copy Constructor: creates a deep copy of the prevCountry object 
     Country(const Country& prevCountry);
 
-    //Move Constructor
+    //Move Constructor: takes the resources away from the prevCountry object and gives to another Country object
     Country(Country&& prevCountry);
 
     //Getters
