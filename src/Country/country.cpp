@@ -35,7 +35,7 @@ Country::~Country() {
         std::cout << "Country: " << this->name << " was destructed." << std::endl;
         delete[] this->name;
     } else{
-        std::cout << "A country which lost its name" << " was destructed." << std::endl;
+        std::cout << "A country which lost its resources its name" << " was destructed." << std::endl;
     }
 };
 
