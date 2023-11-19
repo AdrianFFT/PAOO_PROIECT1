@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCountry.a CMakeFiles/Country.dir/country.cpp.o
-/usr/bin/ranlib libCountry.a

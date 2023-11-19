@@ -1,6 +1,0 @@
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/CMakeFiles/main.exe.dir
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/Country/CMakeFiles/Country.dir
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/Country/CMakeFiles/edit_cache.dir
-/mnt/c/Users/farca/Desktop/PAOO_PROIECT1/build/Country/CMakeFiles/rebuild_cache.dir
