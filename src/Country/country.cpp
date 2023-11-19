@@ -71,7 +71,7 @@ Country::~Country() {
     }
 
 //print
-void Country::printCountry(){
+void Country::printCountry() const {
     std::cout<<"Name: "<<name<<std::endl;
     std::cout<<"Population: "<<population<<std::endl;
     std::cout<<"Area: "<<area<<std::endl;

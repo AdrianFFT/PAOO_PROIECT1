@@ -2,7 +2,18 @@
 #include "country.hpp"
 #include <iostream>
 
+#include "european_country.hpp"
+#include "asian_country.hpp"
+
+using namespace countries;
+
 int main() {
+    //main implementation for hw 2
+
+
+
+
+    /*
     // Create a country and initialize its members
     Country romania((char*)"Romania", 19100000, 238397);
 
@@ -28,4 +39,5 @@ int main() {
 
     // Display the name of the moved country
     std::cout << "Name of the moved country: " << movedCountry.getName() << std::endl; // example that we moved the resources from anotherCountry to movedCountry
+    */
 }

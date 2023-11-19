@@ -37,8 +37,8 @@ public:
     void setArea(float newArea);
 
     //Calculate Country Density
-    float calculateDensity();
+    virtual float calculateDensity();
 
-    //print coutry attributes
-    void printCountry();
+    //print country attributes
+    virtual void printCountry() const;
 };
