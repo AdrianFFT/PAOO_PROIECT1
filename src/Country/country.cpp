@@ -2,6 +2,8 @@
 # include <cstring>
 # include <iostream>
 
+// Implementation of the Country class methods
+
 // Constructor
 Country::Country(char *name, int population, float area){
     this->name = new char[strlen(name) + 1];
@@ -67,3 +69,44 @@ Country::~Country() {
     float Country::calculateDensity(){
         return (float)population/area;
     }
+
+//print
+void Country::printCountry(){
+    std::cout<<"Name: "<<name<<std::endl;
+    std::cout<<"Population: "<<population<<std::endl;
+    std::cout<<"Area: "<<area<<std::endl;
+}
+
+    // Overloaded copy assignment operator
+Country& Country::operator=(const Country& other) {
+    if (this != &other) {
+        clear();
+
+        name = new char[strlen(other.name) + 1];
+        strcpy(name, other.name);
+        population = other.population;
+        area = other.area;
+    }
+    return *this;
+}
+
+// Overloaded move assignment operator
+Country& Country::operator=(Country&& other) {
+    if (this != &other) {
+        clear();
+
+        name = other.name;
+        other.name = nullptr;
+        population = other.population;
+        area = other.area;
+    }
+    return *this;
+}
+
+// Function for resource deallocation
+void Country::clear() {
+    if (name != nullptr) {
+        delete[] name;
+        name = nullptr;
+    }
+}

@@ -6,6 +6,7 @@ private:
     int population;
     float area;
 
+    void clear();
 public:
     // Constructor: Constructs an Country object
     Country(char* name, int varsta, float area);
@@ -19,6 +20,12 @@ public:
     //Move Constructor: takes the resources away from the prevCountry object and gives to another Country object
     Country(Country&& prevCountry);
 
+    // Overloaded copy assignment operator
+    Country& operator=(const Country& other);
+
+    // Overloaded move assignment operator
+    Country& operator=(Country&& other);
+
     //Getters
     char* getName();
     int getPopulation();
@@ -31,4 +38,7 @@ public:
 
     //Calculate Country Density
     float calculateDensity();
+
+    //print coutry attributes
+    void printCountry();
 };
