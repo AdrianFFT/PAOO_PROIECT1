@@ -1,6 +1,6 @@
 #include "country.hpp"
-#include <algorithm>
-#include <cctype>
+
+#pragma once
 
 namespace countries { //start of namespace
 

@@ -7,6 +7,12 @@
 
 using namespace countries;
 
+#include "Region.hpp"
+#include "R_Banat.hpp"
+#include "R_Crisana.hpp"
+
+using namespace regiune;
+
 int main() {
     //main implementation for hw 2
 
@@ -16,8 +22,16 @@ int main() {
     float densityEuro = europe.calculateDensity();
     float densityAsia = asia.calculateDensity();
 
-    std::cout<<"ONU density of Romania in Europe: "<<densityEuro<<std::endl;
-    std::cout<<"ONU density of Romania in Asia: "<<densityAsia<<std::endl;
+    std::cout<<"ONU density of Romania in Europe : "<<densityEuro<<std::endl;
+    std::cout<<"ONU density of Romania in Asia : "<<densityAsia<<std::endl;
+
+    R_Banat banat;
+    banat.setName("Banat");
+    banat.displayInfo();
+
+    R_Crisana crisana;
+    crisana.setName("Crisana");
+    crisana.displayInfo();
     /*
     //main implementation for hw 1
 
