@@ -4,6 +4,11 @@
 
 // Implementation of the Country class methods
 
+// Default Constructor
+Country::Country() : name(nullptr), population(0), area(0.0) {
+    std::cout << "Default Country constructor was called." << std::endl;
+}
+
 // Constructor
 Country::Country(char *name, int population, float area){
     this->name = new char[strlen(name) + 1];

@@ -8,6 +8,9 @@ private:
 
     void clear();
 public:
+    // Default Constructor
+    Country();
+
     // Constructor: Constructs an Country object
     Country(char* name, int varsta, float area);
 
