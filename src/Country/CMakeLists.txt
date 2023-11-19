@@ -1,3 +1,5 @@
 add_library(Country country.cpp)
 add_library(europeanCountry european_country.cpp)
 add_library(asianCountry asian_country.cpp)
+add_library(R_Banat R_Banat.cpp)
+add_library(R_Crisana R_Crisana.cpp)
