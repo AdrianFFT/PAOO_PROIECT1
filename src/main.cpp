@@ -10,10 +10,17 @@ using namespace countries;
 int main() {
     //main implementation for hw 2
 
+    europeanCountry europe((char *)"Romania", 19100000, 238397);
+    asianCountry    asia((char *)"New Romania", 19100000, 238397);
 
+    float densityEuro = europe.calculateDensity();
+    float densityAsia = asia.calculateDensity();
 
-
+    std::cout<<"ONU density of Romania in Europe: "<<densityEuro<<std::endl;
+    std::cout<<"ONU density of Romania in Asia: "<<densityAsia<<std::endl;
     /*
+    //main implementation for hw 1
+
     // Create a country and initialize its members
     Country romania((char*)"Romania", 19100000, 238397);
 
